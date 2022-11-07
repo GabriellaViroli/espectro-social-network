@@ -127,23 +127,23 @@ const mountPost = (post) => {
   container.innerHTML = templatePost;
 
   const btnDelete = container.querySelector('#btn-delete');
-  //para disparar o modal
+  // para disparar o modal
   const modalDelete = container.querySelector('#modal-delete');
-  if(btnDelete) {
+  if (btnDelete) {
     btnDelete.addEventListener('click', () => {
       modalDelete.style.display = 'flex';
     });
   }
-  //para fechar o modal
+  // para fechar o modal
   const btnModalCancel = container.querySelector('#btn-modal-cancel');
-  if(btnModalCancel) {
+  if (btnModalCancel) {
     btnModalCancel.addEventListener('click', () => {
       modalDelete.style.display = 'none';
     });
   }
-  //para deletar o post
+  // para deletar o post
   const btnModalDelete = container.querySelector('#btn-modal-delete');
-  if(btnModalDelete) {
+  if (btnModalDelete) {
     btnModalDelete.addEventListener('click', () => {
       deletePost(post.id);
       modalDelete.style.display = 'none';
@@ -178,7 +178,6 @@ const mountPost = (post) => {
     }
     btnLike.querySelector('p').innerText = post.likes.length;
   });
-  
 
   return container;
 };
