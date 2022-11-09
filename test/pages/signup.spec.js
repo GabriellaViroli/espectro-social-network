@@ -3,11 +3,11 @@
  */
 import { newUser, loginGoogle } from '../../src/firebase/auth.js';
 import signup from '../../src/pages/signup/signup.js';
-import { redirect } from '../../src/routes.js';
+import { redirect } from '../../src/redirect.js';
 
 jest.mock('../../src/firebase/exports.js');
 jest.mock('../../src/firebase/auth.js');
-jest.mock('../../src/routes.js');
+jest.mock('../../src/redirect.js');
 
 afterEach(() => {
   redirect.mockClear();

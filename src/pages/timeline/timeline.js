@@ -9,7 +9,7 @@ import {
 } from '../../firebase/timeline.js';
 
 import { getUser, logout } from '../../firebase/auth.js';
-import { redirect } from '../../routes.js';
+import { redirect } from '../../redirect.js';
 import { getAuth } from '../../firebase/exports.js';
 import { app } from '../../firebase/config.js';
 
@@ -83,7 +83,7 @@ export default () => {
   return container;
 };
 
-const mountPost = (post) => {
+export const mountPost = (post) => {
   let editDeleteButtons = '';
   if (auth.currentUser.uid === post.userId) {
     editDeleteButtons = `
@@ -127,21 +127,21 @@ const mountPost = (post) => {
   container.innerHTML = templatePost;
 
   const btnDelete = container.querySelector('#btn-delete');
-  // para disparar o modal
+
   const modalDelete = container.querySelector('#modal-delete');
   if (btnDelete) {
     btnDelete.addEventListener('click', () => {
       modalDelete.style.display = 'flex';
     });
   }
-  // para fechar o modal
+
   const btnModalCancel = container.querySelector('#btn-modal-cancel');
   if (btnModalCancel) {
     btnModalCancel.addEventListener('click', () => {
       modalDelete.style.display = 'none';
     });
   }
-  // para deletar o post
+
   const btnModalDelete = container.querySelector('#btn-modal-delete');
   if (btnModalDelete) {
     btnModalDelete.addEventListener('click', () => {
