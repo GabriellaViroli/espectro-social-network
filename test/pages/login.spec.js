@@ -3,11 +3,11 @@
  */
 import { loginUser, loginGoogle } from '../../src/firebase/auth.js';
 import login from '../../src/pages/login/login.js';
-import { redirect } from '../../src/routes.js';
+import { redirect } from '../../src/redirect.js';
 
 jest.mock('../../src/firebase/exports.js');
 jest.mock('../../src/firebase/auth.js');
-jest.mock('../../src/routes.js');
+jest.mock('../../src/redirect.js');
 
 const awaitInAllPromisses = () => new Promise(process.nextTick);
 

@@ -50,13 +50,12 @@ export async function readAllPosts() {
   const querySnapshot = await getDocs(collection(firestore, 'posts'));
   const posts = [];
 
-  querySnapshot.forEach((doc) => {
+  querySnapshot.forEach((document) => {
     posts.push({
-      id: doc.id,
-      ...doc.data(),
+      id: document.id,
+      ...document.data(),
     });
   });
-
   return posts;
 }
 
