@@ -85,7 +85,7 @@ export default () => {
 
 export const mountPost = (post) => {
   let editDeleteButtons = '';
-  if (auth.currentUser.uid === post.userId) {
+  if (getUser().uid === post.userId) {
     editDeleteButtons = `
       <div class='container-btns-right'>
         <button class='btn-edit' id='btn-edit' data-post-id='${post.userId}'><img class='btn-edit-icon' src='./imagens/icon-edit.svg' alt='edit'></button>
