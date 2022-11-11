@@ -19,7 +19,7 @@
 
   **Status do Projeto:** Concluído ✅ <br/><br/>
     
-  A rede social *Espectro* pode ser visitada [aqui](https://brunalimxst.github.io/espectro-social-network/)!
+  A rede social *Espectro* pode ser visitada [aqui](https://gabriellaviroli.github.io/espectro-social-network/)!
 </div>
 
 ## Índice
